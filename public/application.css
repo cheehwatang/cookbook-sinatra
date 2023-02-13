@@ -131,6 +131,27 @@ p, nav {
   cursor: pointer;
 }
 
+.done-button {
+  background-color: #87DD92;
+  transition: 0.5s;
+  padding: 2px 20px;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.done-button:hover {
+  background-color: #5CCE6C;
+  cursor: pointer;
+}
+
+.recipe-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 #form-title {
   width: 40vw;
   margin: 20px auto 20px auto;

@@ -42,3 +42,10 @@ post "/destroy" do
   cookbook.destroy(params["recipe_index"].to_i)
   redirect "/"
 end
+
+post "/mark_as_done" do
+  recipe = cookbook.find(params["recipe_index"].to_i)
+  recipe.mark_as_done!
+  cookbook.update
+  redirect "/"
+end
