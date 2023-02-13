@@ -160,11 +160,6 @@ p, nav {
   background-color: #E0E0E0;
 }
 
-.disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
 .recipe-buttons {
   display: flex;
   justify-content: space-around;

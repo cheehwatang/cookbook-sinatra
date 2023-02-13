@@ -49,3 +49,10 @@ post "/mark_as_done" do
   cookbook.update
   redirect "/"
 end
+
+post "/mark_as_undone" do
+  recipe = cookbook.find(params["recipe_index"].to_i)
+  recipe.mark_as_undone!
+  cookbook.update
+  redirect "/"
+end
