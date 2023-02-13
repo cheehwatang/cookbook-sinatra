@@ -28,7 +28,8 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 p, nav {
@@ -101,11 +102,6 @@ p, nav {
   cursor: pointer;
 }
 
-.recipe-name h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-
 .recipe-description p {
   display: block;
   font-size: 1.6rem;
@@ -133,4 +129,44 @@ p, nav {
 .delete-button:hover {
   background-color: #F01D25;
   cursor: pointer;
+}
+
+#form-title {
+  width: 40vw;
+  margin: 20px auto 20px auto;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #a4a4a4
+}
+
+#new-recipe-form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+input, textarea {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 1.5em;
+  padding-left: 5px;
+}
+
+#submit-new-recipe {
+  display: block;
+  font-size: 2em;
+  width: 60%;
+  margin: 1em auto;
+  margin-top: 30px;
+  height: 3em;
+  font-size: 1.1rem;
+  min-width: 300px;
 }

@@ -31,9 +31,9 @@ end
 
 post "/recipes" do
   new_recipe = Recipe.new({ name: params["recipe_name"],
-                             description: params["recipe_name"],
-                             rating: params["rating"].to_i,
-                             prep_time: params["prep_time"] })
+                             description: params["recipe_description"],
+                             rating: params["recipe_rating"].to_i,
+                             prep_time: params["recipe_prep_time"] })
   cookbook.create(new_recipe)
   redirect "/"
 end

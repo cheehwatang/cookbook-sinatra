@@ -1,11 +1,22 @@
-<form action="/recipes" method="post">
-  <label for="recipe_name">Recipe name:</label>
-  <input type="text" id="recipe_name" name="recipe_name">
-  <label for="recipe_description">Recipe description:</label>
-  <input type="text" id="recipe_description" name="recipe_description">
-  <label for="recipe_rating">Recipe rating:</label>
-  <input type="text" id="recipe_rating" name="recipe_rating">
-  <label for="recipe_prep_time">Recipe prep time:</label>
-  <input type="text" id="recipe_prep_time" name="recipe_prep_time">
-  <input type="submit" value="Submit">
-</form>
+<section>
+  <h2 id="form-title">New Recipe Form</h2>
+  <form action="/recipes" method="post" id="new-recipe-form">
+    <label for="recipe_name">
+      Recipe Name: <input type="text" id="recipe_name" name="recipe_name" required>
+    </label>
+
+    <label for="recipe_description">
+      Recipe Description: <textarea id="recipe_description" name="recipe_description" rows="4" cols="30" required></textarea>
+    </label>
+
+    <label for="recipe_rating">
+      Recipe Rating: <input type="text" id="recipe_rating" name="recipe_rating" required>
+    </label>
+    
+    <label for="recipe_prep_time">
+      Recipe Prep Time: <input type="text" id="recipe_prep_time" name="recipe_prep_time" required>
+    </label>
+
+    <input type="submit" value="Submit" id="submit-new-recipe">
+  </form>
+</section>
