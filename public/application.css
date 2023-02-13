@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: #EEE;
+  position: absolute;
+  top: 75px;
+  width: 100%;
+  text-align: center;
+}
+
+div {
+  padding: 10px 10px;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 2rem;
+}
+
+p, nav {
+  font-size: 1.5rem;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #EEE;
+}
+
+#header-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#new-recipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #F1C40F;
+  transition: 0.5s;
+  padding: 2px 20px;
+  font-size: 1.7em;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #FFA600;
+  cursor: pointer;
+}
+
+#recipes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.recipe-card {
+  background-color: #EAEAEA;
+  width: 30%;
+  max-width: 500px;
+  height: 100%;
+  border: 2px solid #BBB;
+  border-radius: 5px;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.recipe-card:hover {
+  background-color: #E0E0E0;
+  cursor: pointer;
+}
+
+.recipe-name h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.recipe-description p {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.recipe-rating p {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.delete-button {
+  background-color: #E8888C;
+  transition: 0.5s;
+  padding: 2px 20px;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.delete-button:hover {
+  background-color: #F01D25;
+  cursor: pointer;
+}
