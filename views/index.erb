@@ -1,5 +1,11 @@
-<% @usernames.each do |username| %>
+<% @recipes.each_with_index do |recipe, index| %>
   <li>
-    <%= username %>
+    <%= "#{recipe.name} (#{recipe.rating} / 5) - Prep Time: #{recipe.prep_time}" %>
+    <form action="/destroy" method="post">
+      <input type="hidden" name="recipe_index" value="<%= index %>"> 
+      <input type="submit" value="Delete Recipe">
+    </form>
   </li>
 <% end %>
+
+<a href="/new">New Recipe</a>
