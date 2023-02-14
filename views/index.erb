@@ -20,19 +20,17 @@
       <div class="recipe-prep-time">
         <p><%= "Prep Time: #{recipe.prep_time}" %><p>
       </div>
-      <div class="recipe-buttons">
-        <div class="mark-as-done">
-          <form action="/mark_as_<%= recipe.done? ? 'undone' : 'done' %>" method="post">
-            <input type="hidden" name="recipe_index" value="<%= index %>"> 
-            <input class="recipe-button <%= recipe.done? ? "grey-button" : "green-button" %>" type="submit" value="Mark Recipe As <%= recipe.done? ? 'Undone' : 'Done' %>">
-          </form>
-        </div>
-        <div class="delete-recipe">
-          <form action="/destroy" method="post">
-            <input type="hidden" name="recipe_index" value="<%= index %>"> 
-            <input class="recipe-button red-button" type="submit" value="Delete Recipe">
-          </form>
-        </div>
+      <div class="mark-as-done">
+        <form action="/mark_as_<%= recipe.done? ? 'undone' : 'done' %>" method="post">
+          <input type="hidden" name="recipe_index" value="<%= index %>"> 
+          <input class="recipe-button <%= recipe.done? ? "grey-button" : "green-button" %>" type="submit" value="Mark Recipe As <%= recipe.done? ? 'Undone' : 'Done' %>">
+        </form>
+      </div>
+      <div class="delete-recipe">
+        <form action="/destroy" method="post">
+          <input type="hidden" name="recipe_index" value="<%= index %>"> 
+          <input class="recipe-button red-button" type="submit" value="Delete Recipe">
+        </form>
       </div>
     </div>
   <% end %>

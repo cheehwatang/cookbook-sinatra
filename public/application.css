@@ -84,10 +84,11 @@ p, nav {
 
 .recipe-card {
   width: 30%;
-  max-width: 500px;
+  min-width: 300px;
+  max-width: 400px;
   height: 100%;
-  border-radius: 5px;
-  margin: 2rem;
+  border-radius: 20px;
+  margin: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,6 +114,13 @@ p, nav {
   background-color: #AFEAB7;
 }
 
+.recipe-name {
+  height: 5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .recipe-description p {
   display: block;
   font-size: 1.6rem;
@@ -127,10 +135,17 @@ p, nav {
   font-weight: 600;
 }
 
+/* .recipe-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
 .recipe-button {
   transition: 0.5s;
-  padding: 2px 20px;
-  font-size: 1.4em;
+  padding: 2px 5px;
+  font-size: 1.3em;
   font-weight: 600;
   border-radius: 2px;
   text-align: center;
@@ -167,7 +182,7 @@ p, nav {
 }
 
 #form-title {
-  width: 40vw;
+  width: 60vw;
   margin: 20px auto 20px auto;
   padding-bottom: 20px;
   border-bottom: 3px solid #a4a4a4
