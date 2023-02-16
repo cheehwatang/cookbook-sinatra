@@ -3,8 +3,9 @@ require "sinatra/reloader" if development?
 require "pry-byebug"
 require "better_errors"
 
-require_relative 'cookbook'
-require_relative 'recipe'
+require_relative './cookbook'
+require_relative './recipe'
+require_relative './scrape_allrecipes_service'
 
 # set :bind, "0.0.0.0"
 
@@ -27,6 +28,16 @@ end
 
 get "/new" do
   erb :new
+end
+
+get "/import/:ingredient" do
+  @ingredient = params[:ingredient]
+  @recipe_list = ScrapeAllrecipesService.call(@ingredient)
+  erb :import
+end
+
+post "/import" do
+  redirect "/import/#{params['ingredient']}"
 end
 
 post "/recipes" do

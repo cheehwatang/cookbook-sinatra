@@ -27,9 +27,15 @@ a {
   color: #000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-size: 2.5rem;
   font-weight: 600;
+}
+
+h3, h4, h5, h6 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
 p, nav {
@@ -56,6 +62,7 @@ p, nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .button {
@@ -196,13 +203,46 @@ input, textarea {
   padding-left: 5px;
 }
 
-#submit-new-recipe {
+.submit {
   display: block;
-  font-size: 2em;
-  width: 60%;
+  font-size: 2.4em;
+  width: 40%;
   margin: 1em auto;
   margin-top: 30px;
   height: 3em;
   font-size: 1.1rem;
-  min-width: 300px;
+  min-width: 100px;
+}
+
+#recipe-import-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#import-recipe {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 400px;
+  margin: 20px auto;
+  padding: 2em;
+}
+
+#import-recipe h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+#ingredient-input {
+  font-size: 1.5rem;
+  margin: 10px 0 0 0;
+  width: 40%;
+  min-height: 2em;
+  min-width: 180px;
+}
+
+.block {
+  display: inline;
 }

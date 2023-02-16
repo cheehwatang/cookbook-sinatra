@@ -1,0 +1,31 @@
+<section id="recipe-import-header">
+  <h2>Recipe Search Result from allrecipes.com</h2>
+  <h3>for <%= @ingredient %></h3>
+</section>
+<section id="recipes">
+  <% @recipe_list.each_with_index do |recipe, index| %>
+    <div class="recipe-card grey-card">
+      <div class="recipe-name">
+        <h2><%= recipe[:name] %></h2>
+      </div>
+      <div class="recipe-description">
+        <p><%= recipe[:description] %></p>
+      </div>
+      <div class="recipe-rating">
+        <p>Rating: <%= recipe[:rating] %> / 5<p>
+      </div>
+      <div class="recipe-prep-time">
+        <p>Prep Time: <%= recipe[:prep_time] %><p>
+      </div>
+      <div class="import-recipe">
+        <form action="/recipes" method="post">
+          <input type="hidden" name="recipe_name" value="<%= @recipe_list[index][:name] %>">
+          <input type="hidden" name="recipe_description" value="<%= @recipe_list[index][:description] %>">
+          <input type="hidden" name="recipe_rating" value="<%= @recipe_list[index][:rating] %>">
+          <input type="hidden" name="recipe_prep_time" value="<%= @recipe_list[index][:prep_time] %>">
+          <input class="recipe-button green-button" type="submit" value="Import Recipe">
+        </form>
+      </div>
+    </div>
+  <% end %>
+</section>
