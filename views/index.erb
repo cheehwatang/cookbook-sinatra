@@ -14,7 +14,8 @@
 </section>
 <section id="recipes">
   <% @recipes.each do |recipe| %>
-    <div class="recipe-card <%= recipe.done? ? "green-card" : "grey-card" %>">
+    <div class="recipe-card <%= recipe.done? ? "green-card" : "peach-card" %>">
+      <%= '<i class="fa-sharp fa-solid fa-check fa-3x"></i>' if recipe.done? %>
       <div class="recipe-name">
         <h2><%= recipe.name %></h2>
       </div>
