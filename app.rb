@@ -2,8 +2,7 @@ require "sinatra"
 require "sinatra/reloader" if development?
 require "pry-byebug"
 require "better_errors"
-
-require_relative './cookbook'
+require 'sqlite3'
 require_relative './recipe'
 require_relative './scrape_allrecipes_service'
 
@@ -14,16 +13,12 @@ configure :development do
   BetterErrors.application_root = File.expand_path(__dir__)
 end
 
-csv_file_path = File.join(__dir__, 'recipes.csv')
-cookbook = Cookbook.new(csv_file_path)
+dir = File.dirname(__FILE__)
+DB = SQLite3::Database.new(File.join(dir, "db/recipes.db"))
 
 get "/" do
-  @recipes = cookbook.all
+  @recipes = Recipe.all
   erb :index
-end
-
-get "/about" do
-  erb :about
 end
 
 get "/new" do
@@ -42,28 +37,24 @@ end
 
 post "/recipes" do
   new_recipe = Recipe.new({ name: params["recipe_name"],
-                             description: params["recipe_description"],
-                             rating: params["recipe_rating"].to_i,
-                             prep_time: params["recipe_prep_time"] })
-  cookbook.create(new_recipe)
+                            description: params["recipe_description"],
+                            rating: params["recipe_rating"].to_i,
+                            prep_time: params["recipe_prep_time"] })
+  new_recipe.save
   redirect "/"
 end
 
 post "/destroy" do
-  cookbook.destroy(params["recipe_index"].to_i)
+  Recipe.find(params["recipe_id"].to_i).destroy
   redirect "/"
 end
 
 post "/mark_as_done" do
-  recipe = cookbook.find(params["recipe_index"].to_i)
-  recipe.mark_as_done!
-  cookbook.update
+  Recipe.find(params["recipe_id"].to_i).mark_as_done!
   redirect "/"
 end
 
 post "/mark_as_undone" do
-  recipe = cookbook.find(params["recipe_index"].to_i)
-  recipe.mark_as_undone!
-  cookbook.update
+  Recipe.find(params["recipe_id"].to_i).mark_as_undone!
   redirect "/"
 end
