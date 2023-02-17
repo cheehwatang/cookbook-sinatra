@@ -1,3 +1,10 @@
+<section id="import-recipe">
+  <h2>Search Recipes in allrecipes.com</h2>
+  <form action="/import" method="post" class="block">
+    <input type="text" id="ingredient-input" name="ingredient" placeholder="Enter recipe ingredient" required>
+    <input type="submit" value="Search" class="submit" hidden>
+  </form>
+</section>
 <section id="recipe-import-header">
   <h2>Recipe Search Result from allrecipes.com</h2>
   <h3>for <%= @ingredient %></h3>
