@@ -22,10 +22,11 @@ html {
 }
 
 body {
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: 'ZCOOL XiaoWei', sans-serif;
+  font-weight: 400;
   background-color: var(--main-bg-color);
   position: absolute;
-  top: 75px;
+  top: 110px;
   width: 100%;
   text-align: center;
 }
@@ -62,6 +63,8 @@ p, nav {
 #header {
   position: fixed;
   top: 0;
+  padding-top: 20px;
+  z-index: 1;
   width: 100%;
   min-height: 75px;
   display: flex;
@@ -71,8 +74,9 @@ p, nav {
 }
 
 #header-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
+  font-family: 'Amita', cursive;
 }
 
 #new-recipe {
@@ -119,6 +123,7 @@ p, nav {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  font-family: 'Merienda', cursive;
 }
 
 .peach-card {
@@ -166,16 +171,19 @@ p, nav {
 }
 
 .recipe-button {
+  font-family: 'ZCOOL XiaoWei', sans-serif;
   transition: 0.5s;
-  padding: 2px 5px;
+  padding: 5px 5px;
   font-size: 1.3em;
-  font-weight: 600;
-  border-radius: 2px;
+  font-weight: 500;
+  border-radius: 5px;
   text-align: center;
 }
 
 .red-button {
   background-color: var(--button-red);
+  position: relative;
+  top: 8px;
 }
 
 .red-button:hover {
@@ -184,6 +192,8 @@ p, nav {
 
 .green-button {
   background-color: #87DD92;
+  position: relative;
+  top: 12px;
 }
 
 .green-button:hover {
@@ -192,6 +202,8 @@ p, nav {
 
 .grey-button {
   background-color: var(--light-grey);
+  position: relative;
+  top: 20px;
 }
 
 .grey-button:hover {
@@ -227,7 +239,7 @@ input, textarea {
   padding-left: 5px;
 }
 
-input[type=submit] {
+#new-recipe-submit {
   background-color: var(--undone-card-color-hover);
   border: none;
   padding: 5px 5px;
@@ -240,7 +252,7 @@ input[type=submit] {
   transition: 0.5s;
 }
 
-input[type=submit]:hover {
+#new-recipe-submit:hover {
   background-color: var(--dark-bg-color);
 }
 
@@ -261,12 +273,12 @@ input[type=submit]:hover {
 }
 
 #import-recipe h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 
 #ingredient-input {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 10px 0 0 0;
   width: 40%;
   min-height: 2em;
