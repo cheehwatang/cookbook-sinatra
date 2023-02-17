@@ -1,5 +1,6 @@
 :root {
   --main-bg-color: #FFE6D8;
+  --dark-bg-color: #FFC29B;
   --undone-card-color: #FFD8C4; 
   --undone-card-color-hover: #FFCFB2;
   --done-card-color: #DFFDE3;
@@ -226,15 +227,21 @@ input, textarea {
   padding-left: 5px;
 }
 
-.submit {
-  display: block;
-  font-size: 2.4em;
+input[type=submit] {
+  background-color: var(--undone-card-color-hover);
+  border: none;
+  padding: 5px 5px;
+  margin-top: 25px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
   width: 40%;
-  margin: 1em auto;
-  margin-top: 30px;
-  height: 3em;
-  font-size: 1.1rem;
-  min-width: 100px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+input[type=submit]:hover {
+  background-color: var(--dark-bg-color);
 }
 
 #recipe-import-header {
