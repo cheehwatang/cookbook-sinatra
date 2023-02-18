@@ -295,3 +295,9 @@ input, textarea {
   right: 5px;
   color: green;
 }
+
+@media only screen and (max-width: 430px) {
+  #header-title {
+    font-size: 4.2rem;
+  }
+}
