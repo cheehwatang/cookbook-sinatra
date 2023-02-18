@@ -23,29 +23,29 @@ In Sinatra:
 ## Display
 
 - Home Page
-![Home Page]("https://github.com/cheehwatang/cookbook-sinatra/blob/main/images/home_page.png")
+![Home Page]("https://github.com/cheehwatang/cookbook-sinatra/blob/master/images/home_page.png")
 
 <br>
 
 - Mobile Display
-![Mobile Display]("https://github.com/cheehwatang/cookbook-sinatra/blob/main/images/mobile_display.png")
+![Mobile Display]("https://github.com/cheehwatang/cookbook-sinatra/blob/master/images/mobile_display.png")
 
 <br>
 
 ## Scope of Functionality
 
 - Mark Recipe as Done and Delete Recipe Card
-![Recipe Card]("https://github.com/cheehwatang/cookbook-sinatra/blob/main/images/recipe_cards.png")
+![Recipe Card]("https://github.com/cheehwatang/cookbook-sinatra/blob/master/images/recipe_cards.png")
 
 <br>
 
 - Manually Add New Recipe
-![New Recipe Form]("https://github.com/cheehwatang/cookbook-sinatra/blob/main/images/new_recipe_form.png")
+![New Recipe Form]("https://github.com/cheehwatang/cookbook-sinatra/blob/master/images/new_recipe_form.png")
 
 <br>
 
 - Import Recipe from External Source
-![Recipe Import]("https://github.com/cheehwatang/cookbook-sinatra/blob/main/images/recipe_imports.png")
+![Recipe Import]("https://github.com/cheehwatang/cookbook-sinatra/blob/master/images/recipe_imports.png")
 
 <br>
 
