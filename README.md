@@ -79,7 +79,7 @@ bundle install
 Simply run the program from your terminal:
 
 ```bash
-ruby app.rb
+ruby lib/app.rb
 ```
 
 You should get this output:
